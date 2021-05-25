@@ -1,0 +1,60 @@
+// Variables
+$PrimaryFont: "Poppins", sans-serif;
+$SecondaryFont: "Ubuntu", sans-serif;
+$primary-red-color: hsl(0, 100%, 74%);
+$primary-green-color: hsl(154deg, 59%, 51%);
+$accent-blue: hsl(248deg, 32%, 49%);
+$dark-blue: hsl(249deg, 10%, 26%);
+$grayish-blue: hsl(246deg, 25%, 77%);
+
+// Mixins
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: calculateRem($size);
+  line-height: calculateRem($size) * 1.5;
+}
+
+@mixin border-bottom-shadow($color) {
+  border-bottom: 6px solid $color;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+// Funciones
+@function get-opacity($color, $amount) {
+  @return rgba($color, $amount);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include font-size(16px);
+  font-family: $PrimaryFont;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 24px;
+  background-color: $primary-red-color;
+  color: #f7f7f7;
+  @include media(desktop-s) {
+    width: 100%;
+    min-width: 992px;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
