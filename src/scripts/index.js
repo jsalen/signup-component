@@ -7,15 +7,37 @@ const password = document.querySelector("#password");
 const submitBtn = document.querySelector("#submit-btn");
 
 submitBtn.addEventListener("click", function (e) {
-  console.log("event");
   e.preventDefault();
+});
+
+firstName.addEventListener("input", function () {
   if (firstName.value === "") {
-    showError(1);
-  } else if (lastName.value === "") {
-    showError(2);
-  } else if (!validateEmail(email.value)) {
-    showError(3);
-  } else if (password.value === "") {
-    showError(4);
+    showError(1, true);
+  } else {
+    showError(1, false);
+  }
+});
+
+lastName.addEventListener("input", function () {
+  if (lastName.value === "") {
+    showError(2, true);
+  } else {
+    showError(2, false);
+  }
+});
+
+email.addEventListener("input", function () {
+  if (!validateEmail(email.value)) {
+    showError(3, true);
+  } else {
+    showError(3, false);
+  }
+});
+
+password.addEventListener("input", function () {
+  if (password.value === "") {
+    showError(4, true);
+  } else {
+    showError(4, false);
   }
 });
