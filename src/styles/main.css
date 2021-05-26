@@ -487,6 +487,10 @@ main {
   position: relative;
   padding-bottom: 24px;
   background-color: #ff7a7a;
+  background-image: url("https://i.postimg.cc/DyQGh0z7/bg-intro-mobile.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   color: #f7f7f7;
 }
 
@@ -502,6 +506,7 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    background-image: url("https://i.postimg.cc/3rsq6SkP/bg-intro-desktop.png");
   }
 }
 
