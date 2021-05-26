@@ -70,23 +70,6 @@
           &::placeholder {
             opacity: 0.3;
           }
-
-          &[type="text"]:invalid,
-          &[type="email"]:invalid,
-          &[type="password"]:invalid {
-            background-image: url("https://cdn0.iconfinder.com/data/icons/shift-free/32/Error-512.png");
-            background-size: 20px;
-            background-repeat: no-repeat;
-            background-position: 98% 50%;
-          }
-
-          &:valid {
-            background: url("https://iconarchive.com/download/i103471/paomedia/small-n-flat/sign-check.ico");
-            background-size: 20px;
-            background-repeat: no-repeat;
-            background-position: 98% 50%;
-            opacity: 1;
-          }
         }
 
         &[type="submit"] {
